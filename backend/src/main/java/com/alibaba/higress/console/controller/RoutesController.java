@@ -20,6 +20,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -30,6 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.higress.console.controller.dto.CommonPageQuery;
 import com.alibaba.higress.console.controller.dto.PaginatedResponse;
+import com.alibaba.higress.console.controller.dto.PatchMode;
 import com.alibaba.higress.console.controller.dto.Response;
 import com.alibaba.higress.console.controller.dto.Route;
 import com.alibaba.higress.console.controller.exception.ValidationException;
@@ -57,12 +59,29 @@ public class RoutesController {
     @PutMapping("/{name}")
     public ResponseEntity<Response<Route>> update(@PathVariable("name") @NotBlank String routeName,
         @RequestBody Route route) {
-        if (StringUtils.isNotEmpty(route.getName())) {
+        if (StringUtils.isEmpty(route.getName())) {
             route.setName(routeName);
         } else if (!StringUtils.equals(routeName, route.getName())) {
             throw new ValidationException("Route name in the URL doesn't match the one in the body.");
         }
         return ControllerUtil.buildResponseEntity(routeService.update(route));
+    }
+
+    @PatchMapping("/{name}")
+    public ResponseEntity<Response<Route>> patch(@PathVariable("name") @NotBlank String routeName,
+        @RequestParam(required = false) String mode, @RequestBody Route route) {
+        if (StringUtils.isEmpty(route.getName())) {
+            route.setName(routeName);
+        }
+        PatchMode patchMode = PatchMode.DEFAULT;
+        if (StringUtils.isNotEmpty(mode)) {
+            try {
+                patchMode = Enum.valueOf(PatchMode.class, mode);
+            } catch (IllegalArgumentException ex) {
+                throw new ValidationException("Unsupported patch mode: " + mode);
+            }
+        }
+        return ControllerUtil.buildResponseEntity(routeService.patch(route, patchMode));
     }
 
     @DeleteMapping("/{name}")

@@ -39,4 +39,12 @@ public class KubernetesConstants {
         public static final String PREFIX = "Prefix";
         public static final String IMPLEMENTATION_SPECIFIC = "ImplementationSpecific";
     }
+
+    public static class PatchPath {
+        public static final String METADATA_LABELS = "/metadata/labels";
+        public static final String METADATA_LABELS_PREFIX = METADATA_LABELS + "/";
+        public static final String METADATA_ANNOTATIONS = "/metadata/annotations";
+        public static final String METADATA_ANNOTATIONS_PREFIX = METADATA_ANNOTATIONS + "/";
+        public static final String INGRESS_SPEC_HTTP_PATH = "/spec/rules/0/http/paths";
+    }
 }

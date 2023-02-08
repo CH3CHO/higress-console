@@ -18,18 +18,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.function.Function;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.alibaba.higress.console.constant.CommonKey;
 import com.alibaba.higress.console.constant.KubernetesConstants;
 import com.alibaba.higress.console.controller.dto.Domain;
+import com.alibaba.higress.console.controller.dto.PatchMode;
 import com.alibaba.higress.console.controller.dto.Route;
 import com.alibaba.higress.console.controller.dto.route.RoutePredicate;
 import com.alibaba.higress.console.controller.dto.route.RoutePredicateTypeEnum;
 import com.alibaba.higress.console.controller.dto.route.UpstreamService;
+import com.alibaba.higress.console.service.kubernetes.model.JsonPatch;
+import com.alibaba.higress.console.service.kubernetes.model.JsonPatchOperation;
 import com.alibaba.higress.console.util.KubernetesUtil;
 import com.google.common.base.Splitter;
 
@@ -52,6 +57,8 @@ public class KubernetesModelConverter {
     private static final Splitter FIELD_SPLITTER = Splitter.on(Pattern.compile(" +")).trimResults().omitEmptyStrings();
     private static final V1IngressBackend DEFAULT_MCP_BRIDGE_BACKEND = new V1IngressBackend();
     private static final Integer DEFAULT_WEIGHT = 100;
+    private static final Map<Function<Route, Object>, V1IngressPatchBuilder> V1_INGRESS_PATCH_BUILDERS =
+        new HashMap<>();
 
     static {
         V1TypedLocalObjectReference mcpBridgeReference = new V1TypedLocalObjectReference();
@@ -59,6 +66,27 @@ public class KubernetesModelConverter {
         mcpBridgeReference.setKind(KubernetesConstants.MCP_BRIDGE_KIND);
         mcpBridgeReference.setName(KubernetesConstants.MCP_BRIDGE_NAME_DEFAULT);
         DEFAULT_MCP_BRIDGE_BACKEND.setResource(mcpBridgeReference);
+
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getDomains, KubernetesModelConverter::buildV1IngressPathFromDomains);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getPath, KubernetesModelConverter::buildV1IngressPathFromPath);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getMethods, KubernetesModelConverter::buildV1IngressPathFromMethods);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getHeaders, KubernetesModelConverter::buildV1IngressPathFromHeaders);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getUrlParams, KubernetesModelConverter::buildV1IngressPathFromUrlParams);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getServices, KubernetesModelConverter::buildV1IngressPathFromServices);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getMock, KubernetesModelConverter::buildV1IngressPathFromMock);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getRedirect, KubernetesModelConverter::buildV1IngressPathFromRedirect);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getRateLimit, KubernetesModelConverter::buildV1IngressPathFromRateLimit);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getRewriteTarget,
+            KubernetesModelConverter::buildV1IngressPathFromRewriteTarget);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getUpstreamVhost,
+            KubernetesModelConverter::buildV1IngressPathFromUpstreamVhost);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getTimeout, KubernetesModelConverter::buildV1IngressPathFromTimeout);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getRetries, KubernetesModelConverter::buildV1IngressPathFromRetries);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getCors, KubernetesModelConverter::buildV1IngressPathFromCors);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getRequestHeaderControl,
+            KubernetesModelConverter::buildV1IngressPathFromRequestHeaderControl);
+        V1_INGRESS_PATCH_BUILDERS.put(Route::getResponseHeaderControl,
+            KubernetesModelConverter::buildV1IngressPathFromResponseHeaderControl);
     }
 
     public boolean isIngressSupported(V1Ingress ingress) {
@@ -150,6 +178,124 @@ public class KubernetesModelConverter {
             name = CommonKey.DOMAIN_PREFIX + name;
         }
         return name;
+    }
+
+    public JsonPatch buildPatch(Route route, PatchMode mode) {
+        JsonPatch patch = new JsonPatch();
+        for (Map.Entry<Function<Route, Object>, V1IngressPatchBuilder> entry : V1_INGRESS_PATCH_BUILDERS.entrySet()) {
+            Object value = entry.getKey().apply(route);
+            if (value == null) {
+                continue;
+            }
+            List<JsonPatchOperation> operations = entry.getValue().build(mode, value);
+            if (CollectionUtils.isNotEmpty(operations)) {
+                patch.addOperations(operations);
+            }
+        }
+        return patch;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromDomains(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromPath(PatchMode patchMode, Object value) {
+        if (patchMode == PatchMode.DELETE) {
+            throw new IllegalArgumentException("Deleting path is not allowed.");
+        }
+
+        RoutePredicate pathPredicate = (RoutePredicate)value;
+        V1ObjectMeta metadata = new V1ObjectMeta();
+        V1HTTPIngressRuleValue httpRule = new V1HTTPIngressRuleValue();
+        fillHttpPathRule(metadata, httpRule, pathPredicate);
+
+        List<JsonPatchOperation> operations = new ArrayList<>();
+
+        operations
+            .add(JsonPatchOperation.replace(KubernetesConstants.PatchPath.INGRESS_SPEC_HTTP_PATH, httpRule.getPaths()));
+
+        String useRegexKey = KubernetesConstants.Annotation.INGRESS_USE_REGEX_KEY;
+        String useRegexValue = MapUtils.getString(metadata.getAnnotations(), useRegexKey);
+        String useRegexPatchPath = KubernetesConstants.PatchPath.METADATA_ANNOTATIONS_PREFIX
+            + KubernetesUtil.escapeKeyForJsonPatch(useRegexKey);
+        if (Strings.isNullOrEmpty(useRegexValue)) {
+            operations.add(JsonPatchOperation.remove(useRegexPatchPath));
+        } else {
+            operations.add(JsonPatchOperation.replace(useRegexPatchPath, useRegexValue));
+        }
+
+        return operations;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromMethods(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromHeaders(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromUrlParams(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromServices(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromMock(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromRedirect(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromRateLimit(PatchMode patchMode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromRewriteTarget(PatchMode mode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromUpstreamVhost(PatchMode mode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromTimeout(PatchMode mode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromRetries(PatchMode mode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromCors(PatchMode mode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromRequestHeaderControl(PatchMode mode, Object value) {
+        // TODO: Implement it.
+        return null;
+    }
+
+    private static List<JsonPatchOperation> buildV1IngressPathFromResponseHeaderControl(PatchMode mode, Object value) {
+        // TODO: Implement it.
+        return null;
     }
 
     private static void fillRouteMetadata(Route route, V1ObjectMeta metadata) {
@@ -403,5 +549,11 @@ public class KubernetesModelConverter {
             KubernetesUtil.setAnnotation(metadata, KubernetesConstants.Annotation.INGRESS_DESTINATION,
                 valueBuilder.toString());
         }
+    }
+
+    @FunctionalInterface
+    private interface V1IngressPatchBuilder {
+
+        List<JsonPatchOperation> build(PatchMode mode, Object value);
     }
 }

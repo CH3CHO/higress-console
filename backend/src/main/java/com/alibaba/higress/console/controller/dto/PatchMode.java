@@ -10,24 +10,22 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.alibaba.higress.console.service;
+package com.alibaba.higress.console.controller.dto;
 
-import com.alibaba.higress.console.controller.dto.CommonPageQuery;
-import com.alibaba.higress.console.controller.dto.PaginatedResult;
-import com.alibaba.higress.console.controller.dto.PatchMode;
-import com.alibaba.higress.console.controller.dto.Route;
+/**
+ * @author CH3CHO
+ */
+public enum PatchMode {
 
-public interface RouteService {
+    /**
+     * Replace the original data with provided data.
+     */
+    REPLACE,
 
-    PaginatedResult<Route> list(CommonPageQuery query);
+    /**
+     * Delete the original data if a non-empty data with the same field path is provided.
+     */
+    DELETE;
 
-    Route query(String routeName);
-
-    Route add(Route route);
-
-    Route update(Route route);
-
-    Route patch(Route route, PatchMode mode);
-
-    void delete(String name);
+    public static final PatchMode DEFAULT = REPLACE;
 }

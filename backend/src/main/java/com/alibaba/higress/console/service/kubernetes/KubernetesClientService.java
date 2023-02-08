@@ -38,9 +38,11 @@ import com.alibaba.higress.console.constant.KubernetesConstants;
 import com.alibaba.higress.console.constant.KubernetesConstants.Label;
 import com.alibaba.higress.console.controller.dto.istio.IstioEndpointShard;
 import com.alibaba.higress.console.controller.dto.istio.RegistryzService;
+import com.alibaba.higress.console.service.kubernetes.model.JsonPatch;
 import com.alibaba.higress.console.util.KubernetesUtil;
 
 import io.kubernetes.client.common.KubernetesObject;
+import io.kubernetes.client.custom.V1Patch;
 import io.kubernetes.client.openapi.ApiClient;
 import io.kubernetes.client.openapi.ApiException;
 import io.kubernetes.client.openapi.apis.CoreV1Api;
@@ -55,6 +57,7 @@ import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.kubernetes.client.openapi.models.V1Status;
 import io.kubernetes.client.util.ClientBuilder;
 import io.kubernetes.client.util.KubeConfig;
+import io.kubernetes.client.util.PatchUtils;
 import io.kubernetes.client.util.Strings;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.OkHttpClient;
@@ -227,6 +230,13 @@ public class KubernetesClientService {
         NetworkingV1Api apiInstance = new NetworkingV1Api(client);
         return apiInstance.replaceNamespacedIngress(metadata.getName(), controllerNamespace, ingress, null, null, null,
             null);
+    }
+
+    public V1Ingress patchIngress(String name, JsonPatch jsonPatch) throws ApiException {
+        NetworkingV1Api apiInstance = new NetworkingV1Api(client);
+        V1Patch patch = new V1Patch(apiInstance.getApiClient().getJSON().serialize(jsonPatch.getOperations()));
+        return PatchUtils.patch(V1Ingress.class, () -> apiInstance.patchNamespacedIngressCall(name, controllerNamespace,
+            patch, null, null, null, "ignore", null, null), V1Patch.PATCH_FORMAT_JSON_PATCH, apiInstance.getApiClient());
     }
 
     public void deleteIngress(String name) throws ApiException {

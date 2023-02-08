@@ -18,6 +18,7 @@ import java.util.Objects;
 
 import io.kubernetes.client.common.KubernetesObject;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
+import org.apache.commons.lang3.StringUtils;
 
 public class KubernetesUtil {
 
@@ -61,5 +62,12 @@ public class KubernetesUtil {
             metadata.setAnnotations(annotations);
         }
         annotations.put(key, value);
+    }
+
+    public static String escapeKeyForJsonPatch(String key) {
+        if (StringUtils.isEmpty(key)) {
+            return key;
+        }
+        return key.replace("~", "~0").replace("/", "~1");
     }
 }
