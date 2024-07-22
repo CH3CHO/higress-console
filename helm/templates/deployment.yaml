@@ -60,7 +60,7 @@ spec:
               value: {{ .Values.global.ingressClass }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: 8080 # This is always 8080.
               protocol: TCP
           readinessProbe:
             httpGet:
