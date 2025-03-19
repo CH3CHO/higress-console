@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,9 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import com.alibaba.higress.sdk.constant.HigressConstants;
 import com.alibaba.higress.sdk.exception.BusinessException;
+import com.alibaba.higress.sdk.exception.NotFoundException;
 import com.alibaba.higress.sdk.exception.ResourceConflictException;
 import com.alibaba.higress.sdk.exception.ValidationException;
 import com.alibaba.higress.sdk.http.HttpStatus;
@@ -256,6 +259,41 @@ class WasmPluginInstanceServiceImpl implements WasmPluginInstanceService {
             throw new BusinessException("Error occurs when getting WasmPlugin.", e);
         }
         deletePluginInstances(existedCrs, targets);
+    }
+
+    @Override
+    public void reloadBinary(String pluginName) {
+        List<V1alpha1WasmPlugin> crs;
+        try {
+            crs = kubernetesClientService.listWasmPlugin(pluginName);
+        } catch (ApiException e) {
+            throw new BusinessException("Error occurs when getting WasmPlugin.", e);
+        }
+        if (CollectionUtils.isEmpty(crs)) {
+            throw new NotFoundException("Plugin " + pluginName + " not found");
+        }
+        for (V1alpha1WasmPlugin cr : crs) {
+            List<WasmPluginInstance> instances = kubernetesModelConverter.getWasmPluginInstancesFromCr(cr);
+            if (CollectionUtils.isEmpty(instances)) {
+                continue;
+            }
+            for (WasmPluginInstance instance : instances) {
+                if (!Boolean.TRUE.equals(instance.getEnabled())) {
+                    continue;
+                }
+                if (instance.getConfigurations() == null) {
+                    instance.setConfigurations(new HashMap<>());
+                }
+                instance.getConfigurations().put(HigressConstants.WASM_PLUGIN_RELOAD_FLAG, System.currentTimeMillis());
+                kubernetesModelConverter.setWasmPluginInstanceToCr(cr, instance);
+            }
+            try {
+                kubernetesClientService.replaceWasmPlugin(cr);
+            } catch (ApiException e) {
+                throw new BusinessException(
+                    "Error occurs when trying to updating WasmPlugin with name " + cr.getMetadata().getName(), e);
+            }
+        }
     }
 
     private void deletePluginInstances(List<V1alpha1WasmPlugin> crs, Map<WasmPluginInstanceScope, String> targets) {

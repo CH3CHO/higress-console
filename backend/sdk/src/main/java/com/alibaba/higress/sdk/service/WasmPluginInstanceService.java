@@ -41,4 +41,6 @@ public interface WasmPluginInstanceService {
     void deleteAll(WasmPluginInstanceScope scope, String target);
 
     void deleteAll(Map<WasmPluginInstanceScope, String> targets);
+
+    void reloadBinary(String pluginName);
 }

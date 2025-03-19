@@ -26,4 +26,5 @@ public class HigressConstants {
     public static final String FALLBACK_FROM_HEADER = "x-higress-fallback-from";
     public static final String MODEL_ROUTING_HEADER = "x-higress-llm-model";
     public static final String INTERNAL_RESOURCE_COMMENT = "PLEASE DO NOT EDIT DIRECTLY. This resource is managed by Higress.";
+    public static final String WASM_PLUGIN_RELOAD_FLAG = "__higress-wasm-reload__";
 }

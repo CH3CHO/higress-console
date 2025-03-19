@@ -243,10 +243,20 @@ public class WasmPluginInstancesController {
         deleteInstance(WasmPluginInstanceScope.SERVICE, serviceName, pluginName);
     }
 
+    @GetMapping(value = "/wasm-plugins/{name}/reload")
+    @Operation(summary = "Force reload the Wasm plugin binary in gateway instances")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Binary reloaded successfully"),
+        @ApiResponse(responseCode = "404", description = "Plugin not found"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")})
+    public ResponseEntity<?> reload(@PathVariable("name") @NotBlank String pluginName) {
+        wasmPluginInstanceService.reloadBinary(pluginName);
+        return ControllerUtil.buildSuccessResponseEntity();
+    }
+
     private ResponseEntity<PaginatedResponse<WasmPluginInstance>> listInstances(WasmPluginInstanceScope scope,
         String target) {
-        List<WasmPluginInstance> instances = wasmPluginInstanceService.list(scope, target).
-                stream().filter(instance -> !instance.isInternal()).toList();
+        List<WasmPluginInstance> instances =
+            wasmPluginInstanceService.list(scope, target).stream().filter(instance -> !instance.isInternal()).toList();
         return ControllerUtil.buildResponseEntity(PaginatedResult.createFromFullList(instances, null));
     }
 

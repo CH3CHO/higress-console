@@ -25,6 +25,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
@@ -560,6 +561,32 @@ public class KubernetesModelConverter {
         return instances;
     }
 
+    public WasmPluginInstance createEmptyWasmPluginInstanceFromCr(V1alpha1WasmPlugin plugin) {
+        WasmPluginInstance instance = new WasmPluginInstance();
+        instance.setInternal(KubernetesUtil.isInternalResource(plugin));
+
+        V1ObjectMeta metadata = plugin.getMetadata();
+        if (metadata == null || MapUtils.isEmpty(metadata.getLabels())) {
+            return instance;
+        }
+
+        V1alpha1WasmPluginSpec spec = plugin.getSpec();
+        if (spec == null) {
+            return instance;
+        }
+
+        String name = metadata.getLabels().get(KubernetesConstants.Label.WASM_PLUGIN_NAME_KEY);
+        String version = metadata.getLabels().get(KubernetesConstants.Label.WASM_PLUGIN_VERSION_KEY);
+        if (StringUtils.isAnyBlank(name, version)) {
+            return instance;
+        }
+
+        instance.setPluginName(name);
+        instance.setPluginVersion(version);
+        instance.setVersion(metadata.getResourceVersion());
+        return instance;
+    }
+
     public WasmPluginInstance getWasmPluginInstanceFromCr(V1alpha1WasmPlugin plugin, WasmPluginInstanceScope scope,
         String target) {
         return getWasmPluginInstanceFromCr(plugin, MapUtil.of(scope, target));
@@ -626,6 +653,11 @@ public class KubernetesModelConverter {
         if (enabled == null) {
             // No enabled is set, which means not configured.
             return null;
+        }
+        if (configurations != null && configurations.containsKey(HigressConstants.WASM_PLUGIN_RELOAD_FLAG)) {
+            // Not show this internal config field to users.
+            configurations = new LinkedHashMap<>(configurations);
+            configurations.remove(HigressConstants.WASM_PLUGIN_RELOAD_FLAG);
         }
         if (!enabled && MapUtils.isEmpty(configurations)) {
             // Disabled and no configuration set. We just take it as not configured.
