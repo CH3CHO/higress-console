@@ -10,14 +10,27 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.alibaba.higress.console.util;
+package com.alibaba.higress.sdk.util;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.security.GeneralSecurityException;
+import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.security.SecureRandom;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.RSAPublicKeySpec;
+import java.util.Base64;
 import java.util.Date;
 
 import javax.security.auth.x500.X500Principal;
@@ -39,6 +52,9 @@ import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 import org.bouncycastle.util.io.pem.PemObject;
 import org.bouncycastle.util.io.pem.PemWriter;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class CertificateUtil {
 
     public static final String RSA_PRIVATE_KEY_PEM_TYPE = "RSA PRIVATE KEY";
@@ -80,5 +96,16 @@ public class CertificateUtil {
             pemWriter.writeObject(pemObject);
         }
         return stringWriter.toString();
+    }
+
+    public static X509Certificate parseCertificateData(String certData) throws CertificateException {
+        CertificateFactory cf = CertificateFactory.getInstance("X509");
+        return (X509Certificate)cf.generateCertificate(new ByteArrayInputStream(certData.getBytes()));
+    }
+
+    public static PKCS8EncodedKeySpec parsePrivateKey(String keyData) {
+        keyData = keyData.replaceAll("-----\\w+ PRIVATE KEY-----", "").replaceAll("\\s", "");
+        byte[] keyBytes = Base64.getDecoder().decode(keyData);
+        return new PKCS8EncodedKeySpec(keyBytes);
     }
 }

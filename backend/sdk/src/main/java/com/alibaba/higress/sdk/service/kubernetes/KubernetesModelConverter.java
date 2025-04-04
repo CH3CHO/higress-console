@@ -12,10 +12,8 @@
  */
 package com.alibaba.higress.sdk.service.kubernetes;
 
-import java.io.ByteArrayInputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.security.cert.CertificateFactory;
 import java.security.cert.CertificateParsingException;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
@@ -78,6 +76,7 @@ import com.alibaba.higress.sdk.service.kubernetes.crd.wasm.MatchRule;
 import com.alibaba.higress.sdk.service.kubernetes.crd.wasm.PluginPhase;
 import com.alibaba.higress.sdk.service.kubernetes.crd.wasm.V1alpha1WasmPlugin;
 import com.alibaba.higress.sdk.service.kubernetes.crd.wasm.V1alpha1WasmPluginSpec;
+import com.alibaba.higress.sdk.util.CertificateUtil;
 import com.alibaba.higress.sdk.util.MapUtil;
 import com.alibaba.higress.sdk.util.TypeUtil;
 import com.google.common.base.Splitter;
@@ -1730,10 +1729,9 @@ public class KubernetesModelConverter {
 
     private static X509Certificate parseCertificateData(String certData) {
         try {
-            CertificateFactory cf = CertificateFactory.getInstance("X509");
-            return (X509Certificate)cf.generateCertificate(new ByteArrayInputStream(certData.getBytes()));
+            return CertificateUtil.parseCertificateData(certData);
         } catch (Exception ex) {
-            log.error("Failed to parse certificate data:\n" + certData, ex);
+            log.error("Failed to parse certificate data:\n{}", certData, ex);
             return null;
         }
     }

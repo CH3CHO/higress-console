@@ -36,7 +36,6 @@ import com.alibaba.higress.console.constant.SystemConfigKey;
 import com.alibaba.higress.console.constant.UserConfigKey;
 import com.alibaba.higress.console.model.SystemInfo;
 import com.alibaba.higress.console.model.User;
-import com.alibaba.higress.console.util.CertificateUtil;
 import com.alibaba.higress.sdk.constant.HigressConstants;
 import com.alibaba.higress.sdk.exception.ResourceConflictException;
 import com.alibaba.higress.sdk.model.Domain;
@@ -50,6 +49,7 @@ import com.alibaba.higress.sdk.service.DomainService;
 import com.alibaba.higress.sdk.service.RouteService;
 import com.alibaba.higress.sdk.service.TlsCertificateService;
 import com.alibaba.higress.sdk.service.kubernetes.KubernetesClientService;
+import com.alibaba.higress.sdk.util.CertificateUtil;
 
 import io.kubernetes.client.openapi.ApiException;
 import io.kubernetes.client.openapi.models.V1Ingress;
