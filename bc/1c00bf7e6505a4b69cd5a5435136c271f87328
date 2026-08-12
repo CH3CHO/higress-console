@@ -1,0 +1,19 @@
+backend/console/pom.xml
+  s_60ed0924feadf0::t_a7d7df379a4ab3 338
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "bc1c00bf7e6505a4b69cd5a5435136c271f87328",
+  "prompts": {},
+  "sessions": {
+    "s_60ed0924feadf0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13250cd1-3d8e-4c80-866a-97834c3afff2",
+        "model": "glm-5.2"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
