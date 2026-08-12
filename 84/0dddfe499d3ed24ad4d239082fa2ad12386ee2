@@ -1,0 +1,23 @@
+frontend/src/components/ClusterSelector/SelectorPanel.tsx
+  s_a52179f74fcd23::t_93cd46644fc57b 83-93
+  s_a52179f74fcd23::t_6f561597f4d1f0 163
+  s_a52179f74fcd23::t_87a7e3cdaeeb04 9
+frontend/src/components/ClusterSelector/index.tsx
+  s_a52179f74fcd23::t_c257439475ec88 75,80-87
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "840dddfe499d3ed24ad4d239082fa2ad12386ee2",
+  "prompts": {},
+  "sessions": {
+    "s_a52179f74fcd23": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a5dc8b76-6d77-4177-85f1-1b50e5b9d8c1",
+        "model": "glm-5.2"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
