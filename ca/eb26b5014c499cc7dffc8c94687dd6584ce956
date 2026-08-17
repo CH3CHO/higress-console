@@ -1,0 +1,94 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/LlmRouteDao.java
+  s_1df572d261d66f::t_73769a56e1bfcd 49-54
+  s_1df572d261d66f::t_7f5fa59c18fb84 171-172,177
+  s_1df572d261d66f::t_c8f28f3b21090d 55-58,60,72,75,91,118,120,139,174
+  s_1df572d261d66f::t_ea33772ec95c72 88-90,94,102,107-112
+  s_1df572d261d66f::t_28108de24ee516 93
+  s_1df572d261d66f::t_b36a52efae1bfd 176
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPoller.java
+  s_1df572d261d66f::t_40abc381b6a26a 1-26,29-30,32-36,41-42,49-111,117-122,124-138,143-189
+  s_1df572d261d66f::t_08b48126bae802 112-116
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImpl.java
+  s_1df572d261d66f::t_198a6d4d6c4326 6
+  s_1df572d261d66f::t_baafe2afc3e762 583-584,588-597,599-609,611-615,622-623
+  s_1df572d261d66f::t_c52c921a02bb1b 739,746-747,749,751,753,755-760,766-767,772-773,775,777-787
+  s_1df572d261d66f::t_7d858a94a16770 501-502,504,506-507,512-515,518-520,529,541-545,547,549-554,559-563,565,569-571,574-575
+  s_1df572d261d66f::t_b5c59a8c4c68ea 750,752
+  s_1df572d261d66f::t_203240d09365dd 11-12,26-27,39-40,114-115,135,148-149,174-177,181-183,216-219,223-225,285-288,291-293,355-358,362-364,411-414,418-420,443-446,450,453,464-500,503,505,508-511,521-528,530-540,546,548,555-558,564,566-568,572,576-582,585-587,598,610,616-621,626-631,713-738,742-745,754,761-765,768-771,776,788-840
+  s_1df572d261d66f::t_689d3745d2b9b5 516-517,573,624-625,740-741,748,774
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/AbstractAggregateDao.java
+  s_1df572d261d66f::t_5bf239aaecfa10 56,81-83,91,110,112,126-128
+  s_1df572d261d66f::t_b4ccc0fe9526b3 114
+  s_1df572d261d66f::t_bddb6fd8445bb7 7
+  s_1df572d261d66f::t_40a4878b98a49f 80,86,109,111,115-119,124-125,129-138
+  s_1df572d261d66f::t_470113413ed1c4 67-68,295-296
+  s_1df572d261d66f::t_f550495911b935 85
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/AggregateDao.java
+  s_1df572d261d66f::t_5890a927d69778 23-25,31,37-38,42
+  s_1df572d261d66f::t_c803401c7abbcd 3,9,20-21,29,34-35,39,46-47,49-51,54-55,57-58
+backend/console/src/main/resources/mapper/SyncTaskMapper.xml
+  s_1df572d261d66f::t_cae6f750933b96 40-41,44
+  s_c2fbc7c3fb4ea1::t_76598ba2d18f61 53-55
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskGray.java
+  s_9597ef39cb3894::t_95429d82ee22d6 1-14,18-19,21-25,27-29,33-68,71-85,89-95
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/dal/dao/AbstractAggregateDaoTest.java
+  s_1df572d261d66f::t_3f1f26347c2fa4 497-604
+  s_1df572d261d66f::t_b8f4b31f421380 34-35,37
+  s_1df572d261d66f::t_924b0b49564f1d 33
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPollerTest.java
+  s_1df572d261d66f::t_760e99bbc36ad1 156-157
+  s_1df572d261d66f::t_faf0dc6eea5b97 97
+  s_1df572d261d66f::t_697966405438af 1-11,13-35,38-81,83,85,87-95,99,101-111,113-114,116,118-132,134-136,152-155,158-164,166-167
+  s_1df572d261d66f::t_856c800b8fb767 82,84,86,96,98,100,112,115,117,133,165
+  s_1df572d261d66f::t_4486ca4ee58b2c 12
+  s_1df572d261d66f::t_ae720b4f75f03d 137-151
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/config/Config.java
+  s_1df572d261d66f::t_91fe80f4e3ea02 155-168
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/RemoteAIGatewayManagementServiceImpl.java
+  s_1df572d261d66f::t_03b145d2fae252 6
+  s_1df572d261d66f::t_43eb50f289d2f1 70-71,74-79
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/model/ResourceWriteResult.java
+  s_1df572d261d66f::t_dfedc7e8c384e0 1-18,20-56
+  s_1df572d261d66f::t_191f30941bbe42 19
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImplTest.java
+  s_1df572d261d66f::t_29387629a88503 955-1021,1023-1048
+  s_1df572d261d66f::t_e332d567b3428f 819
+  s_1df572d261d66f::t_bd87ea60efd213 17
+  s_1df572d261d66f::t_cb8c5daf17a9b5 1022
+  s_1df572d261d66f::t_dbd6085b62720b 7,9
+  s_1df572d261d66f::t_6904f31ed89d24 6,10,79-82,89-91,465-466,500-501,526-527,568-569,583-584,600-601,618-619,628-629,642-643,653-654,781-782,793-794,838,892,915-916,933,950,1068-1069,1087,1134,1158,1198,1231,1248-1249,1254-1256,1294-1296
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/mapper/SyncTaskMapper.java
+  s_1df572d261d66f::t_a6dfaf3d803f1c 1-14,19-23,29-37,40-45,48-52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "caeb26b5014c499cc7dffc8c94687dd6584ce956",
+  "prompts": {},
+  "sessions": {
+    "s_1df572d261d66f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1be52c52-3aa4-4f76-9e05-bf39aeb03a90",
+        "model": "glm-5.2"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    },
+    "s_9597ef39cb3894": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "de7b0b2b-edeb-42e4-b9f6-afd86a1fd19e",
+        "model": "glm-5.2"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    },
+    "s_c2fbc7c3fb4ea1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ff71ca3-d909-4b65-8207-dd7507ca1c4e",
+        "model": "glm-5.2"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/AbstractAggregateDao.java
+  s_44742561061d0e::t_9ccd12d3fb7ce5 163,166-176
+  s_44742561061d0e::t_d55c93a9fdf07f 122-125,127,129-132,138-140
+  s_44742561061d0e::t_8fec9c834e2790 119-120,133-134
+  s_44742561061d0e::t_99a097a88b404f 164-165
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/LlmRouteDao.java
+  s_44742561061d0e::t_7b3502a81eb8d9 97-98,111
+  s_44742561061d0e::t_76ea37e7e7bfb6 190-191
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImpl.java
+  s_44742561061d0e::t_27dafba3d62728 603,610,650,658
+  s_44742561061d0e::t_816693b6afd9ec 559
+  s_44742561061d0e::t_e0bdea353842e0 664-665
+  s_44742561061d0e::t_8de12c1a8a4bb5 617-618,620-622
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPoller.java
+  s_44742561061d0e::t_6f4c350d4a5ac1 12,19-20,31,33-35
+  s_44742561061d0e::t_6c7ec7aad561f5 65,67,69-71
+  s_44742561061d0e::t_39d24131b925ea 18,85-86
+  s_44742561061d0e::t_c1b5e216cb23c1 14-15,32,43,51,73,83,93,112,114,117,124,126,128-129,136,138,141,143,145-154,157-159,188,252-260
+  s_44742561061d0e::t_27d9f7d0bbb333 3,45-50,52,57-58,76-82,98-99,130-132,185,264-267
+  s_44742561061d0e::t_510ff6853e0e36 53
+  s_44742561061d0e::t_98181e5a2b6cc0 111
+  s_44742561061d0e::t_58ef24c1395275 13,16-17,21,54-56,84,87-92,113,115-116,118-123,125,127,133-135,137,139-140,142,144,156,261-263,268-411
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/config/Config.java
+  s_44742561061d0e::t_78ecf3e9098b1c 51-57,67-68
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/Constants.java
+  s_44742561061d0e::t_c081aab843fed1 11
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPollerTest.java
+  s_44742561061d0e::t_2835d41377719b 196-197,199,201,211,213,215,219,226
+  s_44742561061d0e::t_f8fa79f1d3c8c2 234
+  s_44742561061d0e::t_b1ac848eb793fc 16
+  s_44742561061d0e::t_cf13a94842727e 174
+  s_44742561061d0e::t_bb0e83da0a3c55 12
+  s_44742561061d0e::t_1f28b4db830b95 56-58,66
+  s_44742561061d0e::t_5951981c45584a 173,175-195,198,200,202-210,212,214,216-218,220-225,227-233,235
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "1d2ddc534f4d11b68503f77efd9ac9d2b4f225c0",
+  "prompts": {},
+  "sessions": {
+    "s_44742561061d0e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5fb9f0b0-3809-4d7e-a34b-fbb439f9d5e9",
+        "model": "glm-5.2"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}
