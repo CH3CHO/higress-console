@@ -1,0 +1,37 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskExecutor.java
+  s_56714008209aea::t_685809bef9201b 93-94
+  s_56714008209aea::t_7d4ab079ccf231 95
+  s_56714008209aea::t_54a8185f7758f8 43
+  s_56714008209aea::t_24fc7d366e522b 3,13-15,18,35-36,42,44-45,54-60,68-70,76-77,82-91,105-109,112-116,120-125,129-135,138-139,141-148,151-153,156,158-159,162-189,191-192,349
+  s_56714008209aea::t_e9bcce834b6422 92
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/AggregatedAIGatewayManagementServiceImpl.java
+  s_56714008209aea::t_ac07df38543eb4 207
+  s_56714008209aea::t_814aa43f67d4e4 206,208
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskExecutorTest.java
+  s_56714008209aea::t_3205836efa5c0b 6,22,25,30,40-44,61,68-70,75-80,87-88,91-92,94,97-98,101,106-108,111-112,121-123,127-128,137-139,143-144,152-154,158-159,166-168,172-173,184,190-191,198-208,210-220
+  s_56714008209aea::t_662572495ce2b6 29
+  s_56714008209aea::t_86d28c8c5d7510 209
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImpl.java
+  s_56714008209aea::t_9a693069868bf1 427-430,432
+  s_56714008209aea::t_740e2e31c709ee 144
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImplTest.java
+  s_56714008209aea::t_9107799a6215cd 121
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/config/Config.java
+  s_56714008209aea::t_6dfb4c2aa64e3d 78-81,84
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "0463aa6f0e7eb4d6b07b2da5983cccd8bba52dca",
+  "prompts": {},
+  "sessions": {
+    "s_56714008209aea": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3710499a-7d6f-45ec-a4f3-e98ca965b173",
+        "model": "glm-5.2"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}
