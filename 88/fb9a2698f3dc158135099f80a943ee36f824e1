@@ -1,0 +1,20 @@
+frontend/src/pages/ai/trip-llm-routes.tsx
+  s_5946ce996fc13c::t_b67ff588ca1495 6
+  s_5946ce996fc13c::t_cf0d0a3ab244e2 32-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "88fb9a2698f3dc158135099f80a943ee36f824e1",
+  "prompts": {},
+  "sessions": {
+    "s_5946ce996fc13c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8df9851f-33aa-4d49-a268-e0bd125b8521",
+        "model": "glm-5.2"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
