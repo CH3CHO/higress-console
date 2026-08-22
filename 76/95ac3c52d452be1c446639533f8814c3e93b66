@@ -1,0 +1,28 @@
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesClientServiceWithCache.java
+  s_47a5d0f6d2e407::t_ae108bdc598948 310-383
+  s_47a5d0f6d2e407::t_1f2af12eb352ee 153-154
+  s_47a5d0f6d2e407::t_23ea51e6a33980 744-790
+  s_47a5d0f6d2e407::t_89ec2ff7d328ce 28
+  s_47a5d0f6d2e407::t_ce123466dbb00d 34,37-39
+  s_47a5d0f6d2e407::t_f24fb9044790da 107
+  s_47a5d0f6d2e407::t_62f27805795a8f 123,133
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesClientServiceWasmPluginMatchRuleTest.java
+  s_47a5d0f6d2e407::t_945431730b99d7 15-17,21,24-25,35-36,38-41,44,47-48
+  s_47a5d0f6d2e407::t_f9c99412e35001 37,42-43,45-46,49-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "7695ac3c52d452be1c446639533f8814c3e93b66",
+  "prompts": {},
+  "sessions": {
+    "s_47a5d0f6d2e407": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be489bdb-adb6-406f-8f61-9b5966bffa53",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
