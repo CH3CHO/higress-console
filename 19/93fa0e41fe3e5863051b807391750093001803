@@ -1,0 +1,91 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_47a5d0f6d2e407::t_3d39e560c14b66 532-542,590-596
+  s_47a5d0f6d2e407::t_c4282391768155 531,866,1243,1323
+  s_47a5d0f6d2e407::t_55a28a01fc437c 948
+  s_47a5d0f6d2e407::t_65484cd52a040b 1244-1252,1271-1272,1279-1283
+  s_47a5d0f6d2e407::t_8dc57be8d53848 597-683
+  s_47a5d0f6d2e407::t_3b5a30327ccea6 1324-1333,1372-1377
+  s_47a5d0f6d2e407::t_550f868dd76154 13
+  s_47a5d0f6d2e407::t_8d4ba2a1353c2b 1284-1316,1378-1435
+  s_47a5d0f6d2e407::t_c898731b8cc279 932-947,949-1022
+  s_47a5d0f6d2e407::t_adb8c7dd3f1e01 91-109
+  s_47a5d0f6d2e407::t_1a37b3c4b67ff6 867-871,873-877,926-931
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesModelConverter.java
+  s_47a5d0f6d2e407::t_1144ab4d44306b 792-798
+  s_47a5d0f6d2e407::t_4628214be36ee0 860-864
+  s_47a5d0f6d2e407::t_bdec132f28ff86 873-888
+  s_47a5d0f6d2e407::t_1285afc2c2b49a 766-775
+  s_47a5d0f6d2e407::t_c57224bb0d62a4 777-784
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorControllerTest.java
+  s_47a5d0f6d2e407::t_a8837d3e6b0c7c 48-50,55-58
+  s_47a5d0f6d2e407::t_a791b080139291 40
+  s_47a5d0f6d2e407::t_96f9197bf9b979 1-39,41-47,51-54,59-77,81,84-111,122-125,131,134-287
+  s_47a5d0f6d2e407::t_1eced3ea086860 78-80,82-83
+  s_47a5d0f6d2e407::t_9dd4c8dc0f52bd 112-121,126-130,132-133
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImpl.java
+  s_47a5d0f6d2e407::t_602aa4bc66c392 187-200,204-226
+  s_47a5d0f6d2e407::t_d59fa34d8f5396 33
+  s_47a5d0f6d2e407::t_04fa343bfe5a04 110-111
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImplTest.java
+  s_47a5d0f6d2e407::t_9e1b21566e8a98 960-967
+  s_47a5d0f6d2e407::t_259c4425c3f6a1 1014-1019,1021-1029,1033-1072,1074-1121,1123-1161,1163-1184,1187-1258,1263-1270,1272-1291
+  s_47a5d0f6d2e407::t_0ab08f0d70029f 13-14
+  s_47a5d0f6d2e407::t_af22087d6562db 91-93,102
+  s_47a5d0f6d2e407::t_18109e6e5d460e 1122,1162,1186
+  s_47a5d0f6d2e407::t_720eaacce25879 111
+  s_47a5d0f6d2e407::t_8caf93452892c9 24
+  s_47a5d0f6d2e407::t_fe6b037865526f 84-88,104-110
+  s_47a5d0f6d2e407::t_d4d545fada4f33 4,6,8
+  s_47a5d0f6d2e407::t_85b6b4699b2c95 94-99
+  s_47a5d0f6d2e407::t_7cd3d8ed761cd3 100-101,103
+  s_47a5d0f6d2e407::t_c0a8d9933de269 791,934,1020,1073
+  s_47a5d0f6d2e407::t_7f75f8be4e622e 823-834,837-838
+  s_47a5d0f6d2e407::t_16b483788281a1 37
+  s_47a5d0f6d2e407::t_af1c1c2aded62d 1030-1032
+  s_47a5d0f6d2e407::t_bffee527018b6c 1185
+  s_47a5d0f6d2e407::t_a0808f008ca1eb 1259-1262,1271
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesModelConverterTest.java
+  s_47a5d0f6d2e407::t_f747133afc5ec2 2146-2159
+  s_47a5d0f6d2e407::t_31479a62ec6c75 2121-2145
+  s_47a5d0f6d2e407::t_532d28dbc7705d 2183,2191-2200
+  s_47a5d0f6d2e407::t_ae0ca2690f106d 2182,2184-2190,2201-2219
+  s_47a5d0f6d2e407::t_5936da98a0d356 2101-2120
+backend/sdk/src/main/java/com/alibaba/higress/sdk/model/WasmPluginInstance.java
+  s_47a5d0f6d2e407::t_b7204c196058cf 156-168
+  s_47a5d0f6d2e407::t_b8bead0a02a1ab 155,169-177
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorController.java
+  s_47a5d0f6d2e407::t_c7dfd47c5fa915 247,252,254
+  s_47a5d0f6d2e407::t_bdb6ee0bffc92d 160-161,164-178,180-182,185-190,195
+  s_47a5d0f6d2e407::t_e879118912108c 1-24,26-37,39-51,53,56,58-159,162-163,179,183-184,191-194,196-216,218-227,231-246,248-251,253,255-265
+  s_47a5d0f6d2e407::t_1ecf15d14a98d7 217,228-230
+  s_47a5d0f6d2e407::t_4af885a85a27b0 25
+  s_47a5d0f6d2e407::t_868573db1614a8 38
+  s_47a5d0f6d2e407::t_25ad71597e5a32 52,54-55,57
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesClientServiceWasmPluginMatchRuleTest.java
+  s_47a5d0f6d2e407::t_945431730b99d7 3-24,26-29,32,35-36
+  s_47a5d0f6d2e407::t_f9c99412e35001 25,30-31,33-34,37-50
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesClientServiceWithCache.java
+  s_47a5d0f6d2e407::t_ce123466dbb00d 34,37-39
+  s_47a5d0f6d2e407::t_ae108bdc598948 310-383
+  s_47a5d0f6d2e407::t_1f2af12eb352ee 153-154
+  s_47a5d0f6d2e407::t_23ea51e6a33980 744-790
+  s_47a5d0f6d2e407::t_89ec2ff7d328ce 28
+  s_47a5d0f6d2e407::t_f24fb9044790da 107
+  s_47a5d0f6d2e407::t_62f27805795a8f 123,133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "1993fa0e41fe3e5863051b807391750093001803",
+  "prompts": {},
+  "sessions": {
+    "s_47a5d0f6d2e407": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be489bdb-adb6-406f-8f61-9b5966bffa53",
+        "model": "MiniMax-M3"
+      },
+      "human_author": null
+    }
+  }
+}
