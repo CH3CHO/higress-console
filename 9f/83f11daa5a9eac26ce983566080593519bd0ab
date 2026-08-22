@@ -1,0 +1,51 @@
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPollerTest.java
+  s_56714008209aea::t_d8532d981cf16c 235-240,242-247
+  s_56714008209aea::t_9bf602150ac4bf 241
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPoller.java
+  s_37df3858d2df44::t_3d8d8e6028effd 69-70
+  s_56714008209aea::t_86720f9f4957a9 337-346,349-351,353-373
+  s_37df3858d2df44::t_bd0edf33e7bed5 12
+  s_56714008209aea::t_9c2fbe0fb3b020 75-79
+  s_37df3858d2df44::t_6a0a4ec300d4bd 84-85,394-397
+  s_37df3858d2df44::t_b282bb052c27ca 87-88
+  s_37df3858d2df44::t_bc391b045fbac1 164-165
+  s_37df3858d2df44::t_cbf3fe8b25c533 411-412
+  s_37df3858d2df44::t_0c1d03fb6c76be 16
+  s_37df3858d2df44::t_eca41cae6f43e9 68
+  s_37df3858d2df44::t_ce0499414d96f4 67,71
+  s_56714008209aea::t_255fbab4c8b6d9 21
+  s_56714008209aea::t_2dd753dd8f2f12 138-140,151-154
+  s_37df3858d2df44::t_933de00393273a 326
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImpl.java
+  s_37df3858d2df44::t_033228344eae2e 772-773
+  s_37df3858d2df44::t_0c8afe63223f78 606
+  s_37df3858d2df44::t_51b6438b4eae6c 808,831
+  s_37df3858d2df44::t_deff6ac5114b78 655
+  s_37df3858d2df44::t_37901243d633dd 774-783
+  s_37df3858d2df44::t_ee89ff0b28e055 575-578,580
+  s_37df3858d2df44::t_1986a1050e70f4 579
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "9f83f11daa5a9eac26ce983566080593519bd0ab",
+  "prompts": {},
+  "sessions": {
+    "s_37df3858d2df44": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "eccc767d-0cc9-4511-b9b3-05dbfab234f3",
+        "model": "ep-bpcl3tow"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    },
+    "s_56714008209aea": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3710499a-7d6f-45ec-a4f3-e98ca965b173",
+        "model": "glm-5.2"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}

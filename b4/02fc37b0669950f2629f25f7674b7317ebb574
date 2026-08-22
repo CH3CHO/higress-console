@@ -1,0 +1,26 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPoller.java
+  s_56714008209aea::t_86720f9f4957a9 340-349,352-354,356-380
+  s_56714008209aea::t_1a3e59e643ec33 85-88
+  s_56714008209aea::t_2dd753dd8f2f12 142-144,155-159
+  s_56714008209aea::t_9c2fbe0fb3b020 75-80
+  s_56714008209aea::t_255fbab4c8b6d9 20
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskPollerTest.java
+  s_56714008209aea::t_d8532d981cf16c 236-241,243-248
+  s_56714008209aea::t_9bf602150ac4bf 242
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "b402fc37b0669950f2629f25f7674b7317ebb574",
+  "prompts": {},
+  "sessions": {
+    "s_56714008209aea": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3710499a-7d6f-45ec-a4f3-e98ca965b173",
+        "model": "glm-5.2"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}
