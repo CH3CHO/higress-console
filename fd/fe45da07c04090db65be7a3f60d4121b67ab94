@@ -1,0 +1,56 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/config/Config.java
+  s_47a5d0f6d2e407::t_fe979aef77ee53 182-191
+  s_47a5d0f6d2e407::t_6eb349f52a49a0 33-41
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImplTest.java
+  s_47a5d0f6d2e407::t_7cd3d8ed761cd3 91-92,94
+  s_47a5d0f6d2e407::t_5ddd492712a5ee 1148
+  s_47a5d0f6d2e407::t_16b483788281a1 34
+  s_47a5d0f6d2e407::t_d4d545fada4f33 4,6,8
+  s_47a5d0f6d2e407::t_9e1b21566e8a98 946-953
+  s_47a5d0f6d2e407::t_eaf02cc7e7ebda 1172
+  s_47a5d0f6d2e407::t_a0808f008ca1eb 1245-1248,1257
+  s_47a5d0f6d2e407::t_1b7aab25c25475 1059
+  s_47a5d0f6d2e407::t_85b6b4699b2c95 85-90
+  s_47a5d0f6d2e407::t_259c4425c3f6a1 1000-1005,1007-1015,1019-1058,1060-1107,1109-1147,1149-1170,1173-1244,1249-1256,1258-1277
+  s_47a5d0f6d2e407::t_ccf5e658aced86 920
+  s_47a5d0f6d2e407::t_35e91ee91be935 95-97
+  s_47a5d0f6d2e407::t_af1c1c2aded62d 1016-1018
+  s_47a5d0f6d2e407::t_ed51f1ce09f129 1006
+  s_47a5d0f6d2e407::t_7854802ded31a8 1108
+  s_47a5d0f6d2e407::t_7f75f8be4e622e 809-820,823-824
+  s_47a5d0f6d2e407::t_7e035acb6906cf 777
+  s_47a5d0f6d2e407::t_af22087d6562db 82-84,93
+  s_47a5d0f6d2e407::t_bffee527018b6c 1171
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_47a5d0f6d2e407::t_65484cd52a040b 1224-1233,1252-1253,1260-1264
+  s_47a5d0f6d2e407::t_55a28a01fc437c 929
+  s_47a5d0f6d2e407::t_8dc57be8d53848 578-664
+  s_47a5d0f6d2e407::t_1a37b3c4b67ff6 847-852,854-858,907-912
+  s_47a5d0f6d2e407::t_c898731b8cc279 913-928,930-1003
+  s_47a5d0f6d2e407::t_550f868dd76154 13
+  s_47a5d0f6d2e407::t_3d39e560c14b66 512-523,571-577
+  s_47a5d0f6d2e407::t_8d4ba2a1353c2b 1265-1297,1359-1416
+  s_47a5d0f6d2e407::t_3b5a30327ccea6 1304-1314,1353-1358
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorController.java
+  s_47a5d0f6d2e407::t_e879118912108c 1-155,158-159,175,179-180,187-190,192-212,214-223,227-261
+  s_47a5d0f6d2e407::t_1ecf15d14a98d7 213,224-226
+  s_47a5d0f6d2e407::t_bdb6ee0bffc92d 156-157,160-174,176-178,181-186,191
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorControllerTest.java
+  s_47a5d0f6d2e407::t_96f9197bf9b979 1-287
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "fdfe45da07c04090db65be7a3f60d4121b67ab94",
+  "prompts": {},
+  "sessions": {
+    "s_47a5d0f6d2e407": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be489bdb-adb6-406f-8f61-9b5966bffa53",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
