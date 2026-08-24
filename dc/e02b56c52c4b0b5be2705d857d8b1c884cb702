@@ -1,0 +1,44 @@
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImplTest.java
+  s_47a5d0f6d2e407::t_e258ddc7c48140 1206-1246,1255-1275
+  s_67902d70247117::t_4b19b5ecd4931f 5
+  s_67902d70247117::t_0a64d0854fd2de 1247-1254
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_33164e1df9fbc2::t_6cbf11f1daddb2 625
+  s_33164e1df9fbc2::t_302fffb93fa35f 612
+  s_47a5d0f6d2e407::t_1409799cd30e4f 680
+  s_33164e1df9fbc2::t_9249aaeda70ffd 98-99
+  s_47a5d0f6d2e407::t_28db746e434f20 644,649-650,653-660
+  s_33164e1df9fbc2::t_e44800613bd51a 610-611
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "dce02b56c52c4b0b5be2705d857d8b1c884cb702",
+  "prompts": {},
+  "sessions": {
+    "s_33164e1df9fbc2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e4f7fc90-6a04-4c95-98bd-1696be865f86",
+        "model": "MiniMax-M2.7"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_47a5d0f6d2e407": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be489bdb-adb6-406f-8f61-9b5966bffa53",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_67902d70247117": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a10df8c5-61c9-4ca8-af63-a820a65302e5",
+        "model": "glm-5.2"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
