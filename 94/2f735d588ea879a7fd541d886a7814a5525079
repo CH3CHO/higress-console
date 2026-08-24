@@ -1,0 +1,22 @@
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImplTest.java
+  s_df19c2a16d6237::t_a5d698e7bc218a 684-696
+  s_df19c2a16d6237::t_b40b8ef3ac86ae 203-205,209-214,216-220
+  s_df19c2a16d6237::t_81f36fa5167ce8 6
+  s_df19c2a16d6237::t_8afe9ec759174f 225-226,231-233,235,238-243
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "942f735d588ea879a7fd541d886a7814a5525079",
+  "prompts": {},
+  "sessions": {
+    "s_df19c2a16d6237": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f6ab992c-677c-4c1e-ab5f-84357d7ec0bd",
+        "model": "ep-bpcl3tow"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}
