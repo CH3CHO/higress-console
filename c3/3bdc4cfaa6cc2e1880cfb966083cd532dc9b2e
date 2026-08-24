@@ -1,0 +1,35 @@
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImpl.java
+  s_e78874c07df408::t_74d0464a9b64e5 490,493,497,500
+  s_33164e1df9fbc2::t_e68462c7ef8657 184
+  s_33164e1df9fbc2::t_2c1cabb56966fa 217,220
+  s_33164e1df9fbc2::t_73f2f70f9de28b 188,200
+  s_33164e1df9fbc2::t_494f7bf57d5df0 165-166
+  s_33164e1df9fbc2::t_7bbcf564ff2fe4 177
+  s_33164e1df9fbc2::t_e16e29f4aedd3e 595-597,599-610
+  s_33164e1df9fbc2::t_f4846f1fe6f301 568,573-576,578
+  s_33164e1df9fbc2::t_68e51fd507b03e 167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "c33bdc4cfaa6cc2e1880cfb966083cd532dc9b2e",
+  "prompts": {},
+  "sessions": {
+    "s_33164e1df9fbc2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e4f7fc90-6a04-4c95-98bd-1696be865f86",
+        "model": "MiniMax-M2.7"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_e78874c07df408": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "454533c8-1002-40d7-b80b-a438a429a53d",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
