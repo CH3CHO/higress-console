@@ -1,0 +1,58 @@
+backend/console/src/main/resources/mapper/ResourceDataMapper.xml
+  s_a7aed37d0f3532::t_d81af0f6f479d9 72-88
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/AggregateDao.java
+  s_a7aed37d0f3532::t_6a2df0cec0c247 5,11
+  s_a7aed37d0f3532::t_4d6ec814b4e96b 84-87
+  s_a7aed37d0f3532::t_cb48704244ddf5 88-89
+  s_a7aed37d0f3532::t_666424c0b0f40c 90
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskExecutorTest.java
+  s_a7aed37d0f3532::t_f024c41fb19944 56
+  s_a7aed37d0f3532::t_a9bc290f8560cb 65-66
+  s_a7aed37d0f3532::t_4e79a86e801084 115
+  s_a7aed37d0f3532::t_04d5740f182c63 124-201,228,264
+  s_a7aed37d0f3532::t_93d7307f7002b6 210
+  s_a7aed37d0f3532::t_0a74a925a4c7f8 54
+  s_a7aed37d0f3532::t_1788299c7515c3 243
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/SyncTaskExecutor.java
+  s_a7aed37d0f3532::t_650b768e579fec 7
+  s_a7aed37d0f3532::t_17cba0971dfb16 193
+  s_a7aed37d0f3532::t_ac5d0d4d0af0e4 228
+  s_a7aed37d0f3532::t_75e6b95a6bed8b 79
+  s_a7aed37d0f3532::t_24384684ab73e8 106
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/handler/ResourceSyncHandler.java
+  s_a7aed37d0f3532::t_203c07fae59a10 15-25,28-31,33,36,38-40,42
+  s_a7aed37d0f3532::t_f0889915decd1b 3-4,6-7
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/mapper/ResourceDataMapper.java
+  s_a7aed37d0f3532::t_0cb9357522e16b 6
+  s_a7aed37d0f3532::t_4bad3ec8818434 21-23
+  s_a7aed37d0f3532::t_58b33d45dc2990 24-26
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/dao/AbstractAggregateDao.java
+  s_a7aed37d0f3532::t_8e04a3fe422f15 206,211-212,214-221,231-252
+  s_a7aed37d0f3532::t_fc4f0c3ce0c0de 205,207-210,213,222-230
+backend/console/src/main/resources/mapper/SyncTaskMapper.xml
+  s_a7aed37d0f3532::t_4d2ad494dfbe78 100-116
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImpl.java
+  s_a7aed37d0f3532::t_7e724e46c74718 287,575-581,606,654,771-774
+  s_a7aed37d0f3532::t_19df61e7c710de 80
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/dal/mapper/SyncTaskMapper.java
+  s_a7aed37d0f3532::t_bf4921857d58eb 78-85
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImplTest.java
+  s_a7aed37d0f3532::t_c6a9f1e1a5c84e 1132
+  s_a7aed37d0f3532::t_2a784ae21fa099 55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "2cb029b00a5cd672ae1039a44f32dc47d36e3d15",
+  "prompts": {},
+  "sessions": {
+    "s_a7aed37d0f3532": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "addcbec0-c0cc-4a10-abe9-5bf2db6228ef",
+        "model": "ep-bpcl3tow"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}

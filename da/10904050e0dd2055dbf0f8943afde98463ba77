@@ -1,0 +1,27 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_b0e3a6a16dc39d::t_76b023d20a8c10 187,195,198-199
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/LlmRouteService.java
+  s_b0e3a6a16dc39d::t_c717ea042e9b46 36-43
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImplTest.java
+  s_b0e3a6a16dc39d::t_b1e074cbebbc62 202-233
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImplTest.java
+  s_b0e3a6a16dc39d::t_acc61431ad5576 530-533,662-665
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/AIGatewayManagementServiceImpl.java
+  s_b0e3a6a16dc39d::t_330ecb3f04ad40 559-561
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "da10904050e0dd2055dbf0f8943afde98463ba77",
+  "prompts": {},
+  "sessions": {
+    "s_b0e3a6a16dc39d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "43ae1f17-5b0c-499a-b4cd-47a850e25b52",
+        "model": "ep-bpcl3tow"
+      },
+      "human_author": "Kevin Zhang <zhiw.zhang@trip.com>"
+    }
+  }
+}
