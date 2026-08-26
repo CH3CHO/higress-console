@@ -1,0 +1,19 @@
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImplTest.java
+  s_cfdc6e2fbdd552::t_fa2ff8e3bbdad0 221-352
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "8fc3d58d15cea84ca4a69b1a56948d044aedd4d5",
+  "prompts": {},
+  "sessions": {
+    "s_cfdc6e2fbdd552": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f53cacc2-b39a-4a91-a841-7840ee5073c3",
+        "model": "MiniMax-M2.7"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
