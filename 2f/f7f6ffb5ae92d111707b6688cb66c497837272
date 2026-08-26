@@ -1,0 +1,197 @@
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImpl.java
+  s_33164e1df9fbc2::t_494f7bf57d5df0 201-202
+  s_33164e1df9fbc2::t_e16e29f4aedd3e 689-704
+  s_a87e2cba4a836a::t_22df94f2a72f93 655-666,668,671
+  s_33164e1df9fbc2::t_2c1cabb56966fa 268,279
+  s_67902d70247117::t_8caf649acd9407 717-736
+  s_33164e1df9fbc2::t_68e51fd507b03e 203
+  s_a87e2cba4a836a::t_0fc78fe1347be5 206-208,493-494,496-497
+  s_a87e2cba4a836a::t_1d0da860b2bc2d 270-273
+  s_a87e2cba4a836a::t_5b4404e08392ed 261-265,269,274-278
+  s_a87e2cba4a836a::t_b14b903debfef6 386-388
+  s_a87e2cba4a836a::t_77d1dc892dd466 621-630
+  s_a87e2cba4a836a::t_e69503cb5648c2 205,209-212
+  s_47a5d0f6d2e407::t_d59fa34d8f5396 35
+  s_e78874c07df408::t_74d0464a9b64e5 560-570
+  s_a87e2cba4a836a::t_480d19cde40248 651-653
+  s_a87e2cba4a836a::t_768231107c9de3 489-492,495,498
+  s_a87e2cba4a836a::t_5e0127205c3267 217
+  s_33164e1df9fbc2::t_7bbcf564ff2fe4 221
+  s_33164e1df9fbc2::t_73f2f70f9de28b 232-244
+  s_33164e1df9fbc2::t_e68462c7ef8657 228
+  s_a87e2cba4a836a::t_f0a16999142a34 266-267
+  s_33164e1df9fbc2::t_f4846f1fe6f301 648,667,669-670,672
+  s_47a5d0f6d2e407::t_602aa4bc66c392 313-334
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesModelConverter.java
+  s_47a5d0f6d2e407::t_4628214be36ee0 853-856
+  s_47a5d0f6d2e407::t_bdec132f28ff86 864-877
+  s_47a5d0f6d2e407::t_1144ab4d44306b 742-748
+backend/sdk/src/main/java/com/alibaba/higress/sdk/constant/plugin/config/TripLlmRouterConfig.java
+  s_a87e2cba4a836a::t_f0a16999142a34 196-198
+  s_a87e2cba4a836a::t_7628b85f778e71 194-195,199-203
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesModelConverterTest.java
+  s_47a5d0f6d2e407::t_5936da98a0d356 2100-2114
+  s_47a5d0f6d2e407::t_f747133afc5ec2 2136-2147
+  s_47a5d0f6d2e407::t_31479a62ec6c75 2115-2135
+  s_47a5d0f6d2e407::t_ae0ca2690f106d 2170,2174-2178,2189-2206
+  s_47a5d0f6d2e407::t_532d28dbc7705d 2171,2179-2188
+backend/console/src/test/java/com/alibaba/higress/sdk/constant/plugin/config/TripLlmRouterConfigTest.java
+  s_a87e2cba4a836a::t_6655577aa638da 11
+  s_a87e2cba4a836a::t_b2468636a453bb 125-146
+  s_a87e2cba4a836a::t_321892de49028e 6
+backend/sdk/src/main/java/com/alibaba/higress/sdk/model/WasmPluginInstanceScope.java
+  s_a87e2cba4a836a::t_f0a16999142a34 26-27
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImplTest.java
+  s_67902d70247117::t_0a64d0854fd2de 1253-1260
+  s_67902d70247117::t_38127b0e034767 34
+  s_47a5d0f6d2e407::t_380d5f368b58e9 786,818-829,832-833,929,1015,1049,1068
+  s_67902d70247117::t_a0830930b8540f 98-102
+  s_47a5d0f6d2e407::t_85b6b4699b2c95 89
+  s_47a5d0f6d2e407::t_bffee527018b6c 1328
+  s_47a5d0f6d2e407::t_259c4425c3f6a1 1009-1014,1016-1048,1050-1067,1069-1098,1105-1171,1282-1285,1287-1306,1308-1323,1325-1327,1330-1347,1349-1401,1406-1413,1415-1434
+  s_47a5d0f6d2e407::t_d4d545fada4f33 4,7,9
+  s_67902d70247117::t_4b19b5ecd4931f 5
+  s_47a5d0f6d2e407::t_afc7b3b4b1747f 82-86
+  s_47a5d0f6d2e407::t_a0808f008ca1eb 1402-1405,1414
+  s_47a5d0f6d2e407::t_ed6c8dff701338 1104,1286,1307,1324,1329,1348
+  s_47a5d0f6d2e407::t_7cd3d8ed761cd3 90-91,93
+  s_47a5d0f6d2e407::t_af22087d6562db 92
+  s_47a5d0f6d2e407::t_e258ddc7c48140 1212-1252,1261-1281
+frontend/src/pages/ai/trip-llm-routes.tsx
+  s_47a5d0f6d2e407::t_382936843da0b2 172-176,179-187,189-200,202-204,207-208,211-212
+  s_47a5d0f6d2e407::t_0c0b82d1c2336d 201,205-206
+  s_4278b20c2ec297::t_e6efdfbd729f7e 188
+  s_47a5d0f6d2e407::t_269ee177e5a2f1 1-2
+  s_4278b20c2ec297::t_1c0d9362331761 177-178
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorControllerTest.java
+  s_47a5d0f6d2e407::t_96f9197bf9b979 1-46,48-50,52-63,68,71-72,74-82,84-99,112-115,121,125-135,137-190,192-223,225-249,251-270,348-359
+  s_4278b20c2ec297::t_a9cbdb820f0d17 271-347
+  s_47a5d0f6d2e407::t_6045345171944d 103,109
+  s_47a5d0f6d2e407::t_deb53fbb3e731f 47,51
+  s_47a5d0f6d2e407::t_1eced3ea086860 64-65,69-70
+  s_47a5d0f6d2e407::t_48dc7b5b3514f1 66,83,102,108,123,136,191,224,250
+  s_47a5d0f6d2e407::t_9dd4c8dc0f52bd 100-101,104-107,110-111,116-120,122,124
+  s_47a5d0f6d2e407::t_cfaf2e3813d0e2 67,73
+frontend/src/services/plugin.ts
+  s_47a5d0f6d2e407::t_aeb45d99778852 36-40
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_47a5d0f6d2e407::t_b672812da512eb 674-676,950,955,958,985-986,1349,1355-1357,1381
+  s_47a5d0f6d2e407::t_c898731b8cc279 943-949,951,956-957,959-984,987-990
+  s_47a5d0f6d2e407::t_0cfb2164fab28a 1351-1354
+  s_33164e1df9fbc2::t_302fffb93fa35f 615
+  s_33164e1df9fbc2::t_9249aaeda70ffd 98-99
+  s_a87e2cba4a836a::t_762a1533950285 602-605
+  s_47a5d0f6d2e407::t_65484cd52a040b 1220-1221
+  s_33164e1df9fbc2::t_e44800613bd51a 613-614
+  s_47a5d0f6d2e407::t_3e53e92589a505 522,883,1214,1274,1296
+  s_47a5d0f6d2e407::t_8dc57be8d53848 580-601,657-658,668-670,677-680
+  s_47a5d0f6d2e407::t_28db746e434f20 650-656,659-666
+  s_47a5d0f6d2e407::t_8d4ba2a1353c2b 1242-1243,1250-1267,1344-1348,1360-1379,1382-1385
+  s_47a5d0f6d2e407::t_3b5a30327ccea6 1275-1284
+  s_47a5d0f6d2e407::t_1409799cd30e4f 686
+  s_a87e2cba4a836a::t_c973fca17c9142 646-649
+  s_33164e1df9fbc2::t_6cbf11f1daddb2 628
+backend/sdk/src/test/java/com/alibaba/higress/sdk/model/WasmPluginInstanceTest.java
+  s_a87e2cba4a836a::t_f0a16999142a34 11-34
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesClientServiceWithCache.java
+  s_47a5d0f6d2e407::t_89ec2ff7d328ce 28
+  s_47a5d0f6d2e407::t_62f27805795a8f 123,133
+  s_47a5d0f6d2e407::t_ce123466dbb00d 34,37-39
+  s_47a5d0f6d2e407::t_ae108bdc598948 310-346,348-361,364-372,376-381
+  s_47a5d0f6d2e407::t_f24fb9044790da 107
+  s_47a5d0f6d2e407::t_1f2af12eb352ee 153-154
+  s_a87e2cba4a836a::t_f0a16999142a34 347,362-363,373-375,769-771
+  s_47a5d0f6d2e407::t_23ea51e6a33980 742-768,772-788
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImplTest.java
+  s_a87e2cba4a836a::t_b0e9a4d4d0bc28 355-378,380-381,389-390,394-433
+  s_a87e2cba4a836a::t_f0a16999142a34 244,251-252,315-316,343-344,379,382-388,392-393
+  s_a87e2cba4a836a::t_a0fc7ed532b6fd 152-154,179-180
+  s_67902d70247117::t_3c697bccf6b482 167-169
+  s_cfdc6e2fbdd552::t_fa2ff8e3bbdad0 223-243,245-250,253-314,317-342,345-354
+  s_67902d70247117::t_132c6ea0b4ae33 80-82
+  s_a87e2cba4a836a::t_ea93e968f4713a 391
+  s_a87e2cba4a836a::t_443298a6b4aa76 215-216
+  s_67902d70247117::t_6f9427048b8530 28
+  s_a87e2cba4a836a::t_ac59dc2f134e9f 109-133
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesClientServiceWasmPluginMatchRuleTest.java
+  s_47a5d0f6d2e407::t_f9c99412e35001 25,30-31,33-34,37-50
+  s_47a5d0f6d2e407::t_945431730b99d7 3-24,26-29,32,35-36
+backend/sdk/src/main/java/com/alibaba/higress/sdk/model/WasmPluginInstance.java
+  s_47a5d0f6d2e407::t_b8bead0a02a1ab 153,168-176
+  s_a87e2cba4a836a::t_f0a16999142a34 143-149,155-159,161-166
+  s_47a5d0f6d2e407::t_b7204c196058cf 154,160,167
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorController.java
+  s_47a5d0f6d2e407::t_c7dfd47c5fa915 248
+  s_47a5d0f6d2e407::t_bdb6ee0bffc92d 155-156,159-173,175-177,180-183,191,196
+  s_47a5d0f6d2e407::t_a75bdae6c4534f 253,255,257,259
+  s_4278b20c2ec297::t_46fad95fd89a43 192
+  s_47a5d0f6d2e407::t_e879118912108c 1-37,40-54,56-154,157-158,174,178-179,194-195,197-217,219-228,232-247,249-252,254,256,258,260-266
+  s_47a5d0f6d2e407::t_0d2442f6abd479 38-39,55
+  s_a87e2cba4a836a::t_4bc1047224fd18 184-190
+  s_47a5d0f6d2e407::t_1ecf15d14a98d7 218,229-231
+  s_4278b20c2ec297::t_ddcbffa459f236 193
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "2ff7f6ffb5ae92d111707b6688cb66c497837272",
+  "prompts": {},
+  "sessions": {
+    "s_33164e1df9fbc2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e4f7fc90-6a04-4c95-98bd-1696be865f86",
+        "model": "MiniMax-M2.7"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_4278b20c2ec297": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "757fb33d-a634-42db-ad89-2a4ed8d31bd2",
+        "model": "MiniMax-M2.7"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_47a5d0f6d2e407": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be489bdb-adb6-406f-8f61-9b5966bffa53",
+        "model": "MiniMax-M3"
+      },
+      "human_author": null
+    },
+    "s_67902d70247117": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a10df8c5-61c9-4ca8-af63-a820a65302e5",
+        "model": "glm-5.2"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_a87e2cba4a836a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ebe17a5b-6e7e-4c72-bacf-6d20396e9262",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_cfdc6e2fbdd552": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f53cacc2-b39a-4a91-a841-7840ee5073c3",
+        "model": "MiniMax-M2.7"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    },
+    "s_e78874c07df408": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "454533c8-1002-40d7-b80b-a438a429a53d",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
