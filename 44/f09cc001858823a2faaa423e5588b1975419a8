@@ -1,0 +1,26 @@
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImpl.java
+  s_5994a73d6a24d5::t_8e2eb2d6d3ef1f 437-442,455-461,475,477-480,484,490,492-497
+  s_5994a73d6a24d5::t_8300c1c62d35a6 560-572
+  s_5994a73d6a24d5::t_b49ed395b1738b 656-666,724-725
+  s_5994a73d6a24d5::t_a6c72a6f660337 808-819
+  s_5994a73d6a24d5::t_014d71e3daa5e9 755-763,766,770,793-797,799
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImplTest.java
+  s_5994a73d6a24d5::t_634837bd903132 6-8
+  s_5994a73d6a24d5::t_c81e3a0c07dac8 437-552
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "44f09cc001858823a2faaa423e5588b1975419a8",
+  "prompts": {},
+  "sessions": {
+    "s_5994a73d6a24d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97624b4d-d98a-432a-8777-e8abbb516b22",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
