@@ -1,0 +1,25 @@
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImpl.java
+  s_5994a73d6a24d5::t_fa7cc03091d20b 629-634,643-646,658-665,675-691
+  s_5994a73d6a24d5::t_c56d09b8d3668d 589-627
+  s_5994a73d6a24d5::t_145fedd0fe39f4 22
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImplTest.java
+  s_5994a73d6a24d5::t_b9465574d6613b 57-62,64-91,96-130,132-164
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceService.java
+  s_5994a73d6a24d5::t_020b0f2c7f3eca 60-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "f6c037e2cd5a449f4ddc330b826d3e2e3b34e301",
+  "prompts": {},
+  "sessions": {
+    "s_5994a73d6a24d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97624b4d-d98a-432a-8777-e8abbb516b22",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
