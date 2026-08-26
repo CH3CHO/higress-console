@@ -1,0 +1,20 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_5994a73d6a24d5::t_34738cef7bf535 95-99,101-110
+  s_5994a73d6a24d5::t_993befffbb1bdf 642,1002,1273,1391
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "a2233a068b24f638c55aa22fa4ced7083299aea5",
+  "prompts": {},
+  "sessions": {
+    "s_5994a73d6a24d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97624b4d-d98a-432a-8777-e8abbb516b22",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
