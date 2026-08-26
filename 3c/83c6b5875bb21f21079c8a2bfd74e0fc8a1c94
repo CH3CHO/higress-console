@@ -1,0 +1,25 @@
+frontend/src/pages/ai/trip-llm-routes.tsx
+  s_4278b20c2ec297::t_1c0d9362331761 177-178
+  s_4278b20c2ec297::t_e6efdfbd729f7e 188
+backend/console/src/test/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorControllerTest.java
+  s_4278b20c2ec297::t_a9cbdb820f0d17 272-348
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorController.java
+  s_4278b20c2ec297::t_46fad95fd89a43 183
+  s_4278b20c2ec297::t_ddcbffa459f236 184
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "3c83c6b5875bb21f21079c8a2bfd74e0fc8a1c94",
+  "prompts": {},
+  "sessions": {
+    "s_4278b20c2ec297": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "757fb33d-a634-42db-ad89-2a4ed8d31bd2",
+        "model": "MiniMax-M2.7"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
