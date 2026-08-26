@@ -1,0 +1,24 @@
+backend/sdk/src/main/java/com/alibaba/higress/sdk/util/EnvReadUtil.java
+  s_5994a73d6a24d5::t_c42a0b241e4afe 28-41
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_5994a73d6a24d5::t_7f4e253578e52f 102-103
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/config/Config.java
+  s_5994a73d6a24d5::t_76c6928d0b6ee8 69-70,72,77-78
+  s_5994a73d6a24d5::t_1c9d70ab232135 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "132684929b45048b0a789d0ddb17a0544ea61ddf",
+  "prompts": {},
+  "sessions": {
+    "s_5994a73d6a24d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97624b4d-d98a-432a-8777-e8abbb516b22",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
