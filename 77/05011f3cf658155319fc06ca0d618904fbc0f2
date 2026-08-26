@@ -1,0 +1,34 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/controller/refactor/TripLlmRouterMigrationRefactorController.java
+  s_a87e2cba4a836a::t_4bc1047224fd18 184-190
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImpl.java
+  s_a87e2cba4a836a::t_b14b903debfef6 386-388
+  s_a87e2cba4a836a::t_1d0da860b2bc2d 270-273
+  s_a87e2cba4a836a::t_768231107c9de3 489-492,495,498
+  s_a87e2cba4a836a::t_77d1dc892dd466 621-630
+  s_a87e2cba4a836a::t_480d19cde40248 651-653
+  s_a87e2cba4a836a::t_5e0127205c3267 217
+  s_a87e2cba4a836a::t_e69503cb5648c2 205,209-212
+  s_a87e2cba4a836a::t_0fc78fe1347be5 206-208,493-494,496-497
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImplTest.java
+  s_a87e2cba4a836a::t_443298a6b4aa76 215-216
+  s_a87e2cba4a836a::t_ac59dc2f134e9f 109,111,131-133
+  s_a87e2cba4a836a::t_a0fc7ed532b6fd 152,154,179-180
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_a87e2cba4a836a::t_762a1533950285 602-605
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "7705011f3cf658155319fc06ca0d618904fbc0f2",
+  "prompts": {},
+  "sessions": {
+    "s_a87e2cba4a836a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ebe17a5b-6e7e-4c72-bacf-6d20396e9262",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
