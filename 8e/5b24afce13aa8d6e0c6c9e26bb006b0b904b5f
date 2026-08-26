@@ -1,0 +1,42 @@
+backend/console/src/main/java/com/ctrip/framework/gateway/ai/soa/biz/impl/LlmRouteServiceImpl.java
+  s_a87e2cba4a836a::t_c973fca17c9142 643-646
+backend/console/src/test/java/com/alibaba/higress/sdk/constant/plugin/config/TripLlmRouterConfigTest.java
+  s_a87e2cba4a836a::t_b2468636a453bb 125-146
+  s_a87e2cba4a836a::t_321892de49028e 6
+  s_a87e2cba4a836a::t_6655577aa638da 11
+backend/sdk/src/main/java/com/alibaba/higress/sdk/model/WasmPluginInstance.java
+  s_a87e2cba4a836a::t_f0a16999142a34 143,149,155-159,161-166
+backend/sdk/src/test/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImplTest.java
+  s_a87e2cba4a836a::t_ea93e968f4713a 389
+  s_a87e2cba4a836a::t_f0a16999142a34 242,249-250,313-314,341-342,377,380-386,390-391
+  s_a87e2cba4a836a::t_b0e9a4d4d0bc28 353-376,378-379,387-388,392-431
+backend/sdk/src/main/java/com/alibaba/higress/sdk/constant/plugin/config/TripLlmRouterConfig.java
+  s_a87e2cba4a836a::t_f0a16999142a34 196-198
+  s_a87e2cba4a836a::t_7628b85f778e71 194-195,199-203
+backend/sdk/src/main/java/com/alibaba/higress/sdk/model/WasmPluginInstanceScope.java
+  s_a87e2cba4a836a::t_f0a16999142a34 26-27
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/WasmPluginInstanceServiceImpl.java
+  s_a87e2cba4a836a::t_5b4404e08392ed 253-257,261-266
+  s_a87e2cba4a836a::t_f0a16999142a34 258-259
+  s_a87e2cba4a836a::t_22df94f2a72f93 619-630,632,635
+backend/sdk/src/main/java/com/alibaba/higress/sdk/service/kubernetes/KubernetesClientServiceWithCache.java
+  s_a87e2cba4a836a::t_f0a16999142a34 347,362-363,373-375,769-771
+backend/sdk/src/test/java/com/alibaba/higress/sdk/model/WasmPluginInstanceTest.java
+  s_a87e2cba4a836a::t_f0a16999142a34 11-12,18-20,26-27,34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "8e5b24afce13aa8d6e0c6c9e26bb006b0b904b5f",
+  "prompts": {},
+  "sessions": {
+    "s_a87e2cba4a836a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ebe17a5b-6e7e-4c72-bacf-6d20396e9262",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "CH3CHO <ch3cho@qq.com>"
+    }
+  }
+}
